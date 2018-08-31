@@ -6,7 +6,7 @@ POINT p;
 
 int main(void)
 {
-	system("shutdown -s -t 120 -c 注意：请不要试图关闭这个进程");
+	system("shutdown -s -t 120 -c 注意：请不要试图关闭这个进程"); 
 	
 	while (true)
 	{
