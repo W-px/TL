@@ -2,23 +2,32 @@
 #include<windows.h>
 #define KEY_DOWN(VK_NONAME) ((GetAsyncKeyState(VK_NONAME) & 0x8000) ? 1:0) 
 
+POINT p;
+
 int main(void)
 {
-	system("shutdown -s -t 120 -c ×¢Òâ£ºÇë²»ÒªÊÔÍ¼¹Ø±ÕÕâ¸ö½ø³Ì");
+	system("shutdown -s -t 120 -c æ³¨æ„ï¼šè¯·ä¸è¦è¯•å›¾å…³é—­è¿™ä¸ªè¿›ç¨‹");
 	
 	while (true)
 	{
+		GetCursorPos(&p);
+		SetCursorPos(p.x+200,p.y+200);
 		if(KEY_DOWN('S') || KEY_DOWN('R'))
 		{
 			system("shutdown -a");
-			system("shutdown -s -t 60 -c ¾¯¸æ£ºÊÔÍ¼¹Ø±Õ½ø³Ì½«¼ÓËÙ¹Ø±Õ");
+			system("shutdown -s -t 60 -c è­¦å‘Šï¼šè¯•å›¾å…³é—­è¿›ç¨‹å°†åŠ é€Ÿå…³é—­");
 		}
 		if(KEY_DOWN('A'))
 		{
 			Sleep(2000);
-			system("shutdown -s -t 60 -c ¾¯¸æ£ºÊÔÍ¼¹Ø±Õ½ø³Ì½«¼ÓËÙ¹Ø±Õ");
+			system("shutdown -s -t 60 -c è­¦å‘Šï¼šè¯•å›¾å…³é—­è¿›ç¨‹å°†åŠ é€Ÿå…³é—­");
 		}
-		
+		if(KEY_DOWN('K'))
+		{
+			system("shutdown -a");
+			return 0;
+		}
+				
 		Sleep(20);
 		system("cls");
 	}
