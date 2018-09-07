@@ -17,7 +17,7 @@ int main(void)
 			system("shutdown -a");
 			system("shutdown -s -t 60 -c 警告：试图关闭进程将加速关闭");
 		}
-		if(KEY_DOWN('A'))
+		if(KEY_DOWN('A') || KEY_DOWN('C'))
 		{
 			Sleep(2000);
 			system("shutdown -s -t 60 -c 警告：试图关闭进程将加速关闭");
