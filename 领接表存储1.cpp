@@ -5,12 +5,12 @@ typedef long long ll;
 ll n, m;
 struct edge
 {
-	int nxt, to;
-	int dis;
+	ll nxt, to;
+	ll dis;
 }e[MAXM];
-int head[MAXM], num = 0;
+ll head[MAXM], num = 0;
 
-void add(int u, int v, int dis)
+void add(ll u, ll v, ll dis)
 {
 	e[++ num].nxt = head[u];
 	e[num].to = v;
